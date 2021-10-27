@@ -2,11 +2,11 @@
 ~
 { re:
     { id:  "when.timezone.re@ionify.net"
-    , as: ["calendar", "time", "specification"]
+    , as: ["calendar", "date", "time", "specification"]
     , by: ["mike.lee", "team"]
-    , on:  -7.201304071630
-    , to:  -7.202110271542
-    , at:  -0.011
+    , on:  -5.20020705
+    , to:  -7.202110271615
+    , at:  -0.012
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
