@@ -1,12 +1,12 @@
 ;
 ~
 { re:
-    { id:  "when.timezone.re@ionify.net"
-    , as: ["calendar", "date", "time", "specification"]
+    { id:  "when.timezone-first.re@ionify.net"
+    , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110271615
-    , at:  -0.012
+    , to:  -7.202110280627
+    , at:  -0.013
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -98,10 +98,8 @@
             [ "observer's perception of when an instant occurs"
             , " + prefix means after  calendar's base timezone"
             , " - prefix means before calendar's base timezone"
-            ]
-    ,   type: "number"
-    , digits: 46 || 8+17+3*7
-    , values:
+            ],
+      values:
         { minimum: -99999999.99999999999999999999999999999999999999
         , maximum: +99999999.99999999999999999999999999999999999999
         }
@@ -109,9 +107,6 @@
 
   timezone:
     { format: "offset-hour[offset-minute[calendar]]"
-    , detail: "relative to calendar's base timezone; e.g. gregorian utc 00:00"
-    ,   type: "number"
-    , digits:  8
     , values:
         { minimum: -99999999
         , maximum: +99999999
@@ -123,249 +118,34 @@
         [ "timezone's offset in hours; earth: 0..14, max earth hour is 23"
         , "must be 1 digit if less than 10 to ensure interpreted as a decimal number"
         ]
-    ,   type: "number"
-    , digits:  2
-    , values:
-        { minimum:  0
-        , maximum: 99
-        }
     },
 
- "offset-minute":
-    { detail: "timezone's offset in minutes, optional if 00; earth: 00, 15, 30, 45"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  2
-    , values:
-        { minimum: 00
-        , maximum: 99
-        }
-    },
-
- "calendar":
+  calendar:
     { format: "calendar-id(calendar-version)"
-    , detail: "identifies a specific & unique [revised] calendar among all known"
-    ,   type: "number"
     ,   sign: +1
-    , digits:  4
-    , values:
-        { minimum: 0000
-        , maximum: 9999
-        }
-    },
-
- "calendar-id":
-    { detail: "unique # for 1 of all known calendar types, e.g. hebrew, gregorian, etc."
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
-        }
-    },
-
- "calendar-version":
-    { detail: "unique revision of 1 specific type of calendar, e.g. hebrew version 2"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  1
-    , values:
-        { minimum: 0
-        , maximum: 9
-        }
     },
 
  "year-date-time":
     { format: "date[time]"
-    , detail:
-            [ "observer's perception of when, within a cosmic configuration cycle"
-            , " e.g. earth: year, month, day, hour, minute, second, sub-second"
-            ]
-      ,   type: "number"
-      , digits:  38 || 17+3*7
-      , values:
-          { minimum: 0
-          , maximum: 99999999999999999999999999999999999999
-          }
+    ,   sign: +1
+    , digits:  38 || 17+3*7
+    , values:
+        { minimum: 0000
+        }
     },
 
   date:
     { format: "year[month[day]]"
-    ,   type: "number"
-    , digits:  8 || 4+2+2
+    ,   sign: +1
     , values:
-        { minimum: 0
-        , maximum: 99999999
+        { minimum: 0000
         }
     },
   
   year:
-    {   type: "number"
-    ,   sign: +1
-    , digits:  4
+    {   sign: +1
     , values:
         { minimum: 0000
-        , maximum: 9999
-        }
-    },
-
-  month:
-    { detail: "earth: 01..12"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  2
-    , values:
-        { minimum: 00
-        , maximum: 99
-        }
-    },
-
-  day:
-    { detail: "earth: 01..31"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  2
-    , values:
-        { minimum: 00
-        , maximum: 99
-        }
-    },
-
-  time:
-    { format: "hour[minute[second[sub-second]]]"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  30
-    , values:
-        { minimum: 00
-        , maximum: 999999999999999999999999999999
-        }
-    },
-
-  hour:
-    { detail: "earth: 00..23"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  2
-    , values:
-        { minimum: 00
-        , maximum: 99
-        }
-    },
-
-  minute:
-    { detail: "earth: 00..59"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  2
-    , values:
-        { minimum: 00
-        , maximum: 99
-        }
-    },
-
-  second:
-    { detail: "earth: 00..59"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  2
-    , values:
-        { minimum: 00
-        , maximum: 99
-        }
-    },
-
- "sub-second":
-    { format: "ms[mcs[ns[ps[fs[as[zs[ys]]]]]]]"
-    , detail: "milli[micro[nano[pico[femto[atto[zepto[yocto]]]]]]"
-    },
-
-  ms:
-    { detail: "millisecond"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
-        }
-    },
-
-  mcs:
-    { detail: "microsecond"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
-        }
-    },
-
-  ns:
-    { detail: "nanosecond"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
-        }
-    },
-
-  ps:
-    { detail: "picosecond"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
-        }
-    },
-
-  fs:
-    { detail: "femtosecond"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
-        }
-    },
-
-  as:
-    { detail: "attosecond"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
-        }
-    },
-
-  zs:
-    { detail: "zeptosecond"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
-        }
-    },
-
-  ys:
-    { detail: "yoctosecond"
-    ,   type: "number"
-    ,   sign: +1
-    , digits:  3
-    , values:
-        { minimum: 000
-        , maximum: 999
         }
     }
 }

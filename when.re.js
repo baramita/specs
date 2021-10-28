@@ -5,8 +5,8 @@
     , as: ["calendar", "date", "time", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110280528
-    , at:  -0.013
+    , to:  -7.202110280628
+    , at:  -0.014
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -43,8 +43,7 @@
               +- 9007199254740991      <= /ecmacript's max safe integer has 16-places/
         ],
       we:
-        [ "were defining the base when@ that'll be inherited by .timezone & .calendar"
-        , "will ionize EPOCHCAL explicit date & time epoch implicit calendar specification"
+        [ "will ionize EPOCHCAL explicit date & time epoch implicit calendar specification"
         , "like {format:'some(thing)[else]'} where () means required [] means optional"
 
         , "know that when@ well represents numeric date-time versus ecmascript.Date"
@@ -94,11 +93,29 @@
     },
 
   when:
-    {
+    { format: ""
+    , detail:
+            [ "observer's perception of when an instant occurs"
+            ]
+    ,   type: "number"
+    ,   sign:  null
+    , digits: 46 || 8+17+3*7
+    , values:
+        { minimum: null
+        , maximum: null
+        }
     },
 
   timezone:
-    {
+    { format: ""
+    , detail: "relative to calendar's base timezone; e.g. gregorian utc 00:00"
+    ,   type: "number"
+    ,   sign:  null
+    , digits:  8
+    , values:
+        { minimum: null
+        , maximum: null
+        }
     },
 
  "offset-hour":
@@ -125,8 +142,16 @@
         }
     },
 
-  calendaru:
-    {
+  calendar:
+    { format: ""
+    , detail: "identifies a specific & unique [revised] calendar among all known"
+    ,   type: "number"
+    ,   sign:  null
+    , digits:  4
+    , values:
+        { minimum: 0000
+        , maximum: 9999
+        }
     },
 
  "calendar-id":
@@ -157,30 +182,32 @@
             [ "observer's perception of when, within a cosmic configuration cycle"
             , " e.g. earth: year, month, day, hour, minute, second, sub-second"
             ]
-      ,   type: "number"
-      , digits:  38 || 17+3*7
-      , values:
-          { minimum: 0
-          , maximum: 99999999999999999999999999999999999999
-          }
+    ,   type: "number"
+    ,   sign:  null
+    , digits:  38 || 17+3*7
+    , values:
+        { minimum: null
+        , maximum: 99999999999999999999999999999999999999
+        }
     },
 
   date:
     { format: "year[month[day]]"
     ,   type: "number"
+    ,   sign:  null
     , digits:  8 || 4+2+2
     , values:
-        { minimum: 0
+        { minimum: null
         , maximum: 99999999
         }
     },
   
   year:
     {   type: "number"
-    ,   sign: +1
+    ,   sign:  null
     , digits:  4
     , values:
-        { minimum: 0000
+        { minimum: null
         , maximum: 9999
         }
     },
