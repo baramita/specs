@@ -5,8 +5,8 @@
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110280627
-    , at:  -0.013
+    , to:  -7.202110282028
+    , at:  -0.014
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -122,12 +122,10 @@
 
   calendar:
     { format: "calendar-id(calendar-version)"
-    ,   sign: +1
     },
 
  "year-date-time":
     { format: "date[time]"
-    ,   sign: +1
     , digits:  38 || 17+3*7
     , values:
         { minimum: 0000
@@ -136,15 +134,13 @@
 
   date:
     { format: "year[month[day]]"
-    ,   sign: +1
     , values:
         { minimum: 0000
         }
     },
   
   year:
-    {   sign: +1
-    , values:
+    { values:
         { minimum: 0000
         }
     }

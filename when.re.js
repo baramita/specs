@@ -5,8 +5,8 @@
     , as: ["calendar", "date", "time", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110280628
-    , at:  -0.014
+    , to:  -7.202110282023
+    , at:  -0.015
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -43,8 +43,14 @@
               +- 9007199254740991      <= /ecmacript's max safe integer has 16-places/
         ],
       we:
-        [ "will ionize EPOCHCAL explicit date & time epoch implicit calendar specification"
-        , "like {format:'some(thing)[else]'} where () means required [] means optional"
+        [ "will ionize EPOCHCAL explicit date & time epoch implicit calendar"
+        + " specification"
+
+        , "want when@ implementations to keep their [+-] signed direction then"
+        + " convert to +when@ so each sub-attribute, e.g. minute, month & calendar-id"
+        + " will be +positive when parsed, with direction later applied where needed"
+
+        , "like {format:'some(thing)[else]'} where () = required & [] = optional"
 
         , "know that when@ well represents numeric date-time versus ecmascript.Date"
         + " : more date & time details in same number of digits; i.e. timezone offset"
@@ -93,13 +99,13 @@
     },
 
   when:
-    { format: ""
+    { format: null
     , detail:
             [ "observer's perception of when an instant occurs"
             ]
     ,   type: "number"
-    ,   sign:  null
-    , digits: 46 || 8+17+3*7
+    , signed:  true
+    , digits:  46 || 8+17+3*7
     , values:
         { minimum: null
         , maximum: null
@@ -107,10 +113,10 @@
     },
 
   timezone:
-    { format: ""
+    { format: null
     , detail: "relative to calendar's base timezone; e.g. gregorian utc 00:00"
     ,   type: "number"
-    ,   sign:  null
+    , signed:  true
     , digits:  8
     , values:
         { minimum: null
@@ -134,7 +140,7 @@
  "offset-minute":
     { detail: "timezone's offset in minutes, optional if 00; earth: 00, 15, 30, 45"
     ,   type: "number"
-    ,   sign: +1
+    ,   sign: "+"
     , digits:  2
     , values:
         { minimum: 00
@@ -143,10 +149,9 @@
     },
 
   calendar:
-    { format: ""
+    { format: null
     , detail: "identifies a specific & unique [revised] calendar among all known"
     ,   type: "number"
-    ,   sign:  null
     , digits:  4
     , values:
         { minimum: 0000
@@ -157,7 +162,6 @@
  "calendar-id":
     { detail: "unique # for 1 of all known calendar types, e.g. hebrew, gregorian, etc."
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
@@ -168,7 +172,6 @@
  "calendar-version":
     { detail: "unique revision of 1 specific type of calendar, e.g. hebrew version 2"
     ,   type: "number"
-    ,   sign: +1
     , digits:  1
     , values:
         { minimum: 0
@@ -183,7 +186,6 @@
             , " e.g. earth: year, month, day, hour, minute, second, sub-second"
             ]
     ,   type: "number"
-    ,   sign:  null
     , digits:  38 || 17+3*7
     , values:
         { minimum: null
@@ -194,7 +196,6 @@
   date:
     { format: "year[month[day]]"
     ,   type: "number"
-    ,   sign:  null
     , digits:  8 || 4+2+2
     , values:
         { minimum: null
@@ -204,7 +205,6 @@
   
   year:
     {   type: "number"
-    ,   sign:  null
     , digits:  4
     , values:
         { minimum: null
@@ -215,7 +215,6 @@
   month:
     { detail: "earth: 01..12"
     ,   type: "number"
-    ,   sign: +1
     , digits:  2
     , values:
         { minimum: 00
@@ -226,7 +225,6 @@
   day:
     { detail: "earth: 01..31"
     ,   type: "number"
-    ,   sign: +1
     , digits:  2
     , values:
         { minimum: 00
@@ -237,7 +235,6 @@
   time:
     { format: "hour[minute[second[sub-second]]]"
     ,   type: "number"
-    ,   sign: +1
     , digits:  30
     , values:
         { minimum: 00
@@ -248,7 +245,6 @@
   hour:
     { detail: "earth: 00..23"
     ,   type: "number"
-    ,   sign: +1
     , digits:  2
     , values:
         { minimum: 00
@@ -259,7 +255,6 @@
   minute:
     { detail: "earth: 00..59"
     ,   type: "number"
-    ,   sign: +1
     , digits:  2
     , values:
         { minimum: 00
@@ -270,7 +265,6 @@
   second:
     { detail: "earth: 00..59"
     ,   type: "number"
-    ,   sign: +1
     , digits:  2
     , values:
         { minimum: 00
@@ -286,7 +280,6 @@
   ms:
     { detail: "millisecond"
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
@@ -297,7 +290,6 @@
   mcs:
     { detail: "microsecond"
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
@@ -308,7 +300,6 @@
   ns:
     { detail: "nanosecond"
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
@@ -319,7 +310,6 @@
   ps:
     { detail: "picosecond"
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
@@ -330,7 +320,6 @@
   fs:
     { detail: "femtosecond"
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
@@ -341,7 +330,6 @@
   as:
     { detail: "attosecond"
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
@@ -352,7 +340,6 @@
   zs:
     { detail: "zeptosecond"
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
@@ -363,7 +350,6 @@
   ys:
     { detail: "yoctosecond"
     ,   type: "number"
-    ,   sign: +1
     , digits:  3
     , values:
         { minimum: 000
