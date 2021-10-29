@@ -5,8 +5,8 @@
     , as: ["calendar", "date", "time", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110291539
-    , at:  -0.016
+    , to:  -7.202110291557
+    , at:  -0.017
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -122,7 +122,7 @@
     , detail: "relative to calendar's base timezone; e.g. gregorian utc 00:00"
     ,   type: "number"
     , signed:  true
-    , digits:  8
+    , digits:  4
     , values:
         { minimum: null
         , current: null || "live value in [local] host environment"
