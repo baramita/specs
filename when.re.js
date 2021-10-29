@@ -5,8 +5,8 @@
     , as: ["calendar", "date", "time", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110291557
-    , at:  -0.017
+    , to:  -7.202110291615
+    , at:  -0.018
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -157,7 +157,7 @@
     },
 
   calendar:
-    { format: null
+    { format: "calendar-id(calendar-version)"
     , detail: "identifies a specific & unique [revised] calendar among all known"
     ,   type: "number"
     , digits:  4
