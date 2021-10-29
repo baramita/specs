@@ -5,8 +5,8 @@
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110282028
-    , at:  -0.014
+    , to:  -7.202110291548
+    , at:  -0.015
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -31,46 +31,9 @@
 
               +- 0.2021102713075999 <= /2021.10.27 13:07:59.99 timezone offset   0hrs/
                - 12450009.202110260 <= /2021.10.26 0 gregorian timezone offset -12.45/
-        
-        , "has millisecond precision up to tens-place if timezone offset is unneeded"
-        + " because although ecmascript has numeric precision to 21 places, its"
-        + " maximum safe integer value is less than every number needed to represent"
-        + " a when@ with precision to milliseconds ones-place or sub-milliseconds:"
-                  
-        + "  [+-]YYYYMMDDHHMMSSMM"
-              +  2021102213035399      <= /2021.10.22.13.03.53.99 = 1:03:53:990 ms pm/
-              +  202110221303539991231 <= /2021.10.22.13.03.5:.999.123.1 is 21-places/
-              +- 9007199254740991      <= /ecmacript's max safe integer has 16-places/
         ],
       we:
-        [ "will ionize EPOCHCAL explicit date & time epoch implicit calendar specification"
-        , "like {format:'some(thing)[else]'} where () means required [] means optional"
-
-        , "know that when@ well represents numeric date-time versus ecmascript.Date"
-        + " : more date & time details in same number of digits; i.e. timezone offset"
-        + " : discernable natural language numeric date-time format"
-        + " : near precise milliseconds: to hundreds & tens vs hundreds, tens & ones"
-        + " : can specify calendar type, timezone offset & date when time is unneeded"
-        + " : enables simpler & more accurate mathematical date & time comparison"
-        + " : can represent earth-star moments up to ones-place billions of years"
-        + " : can represent existence moments up to tens-place trillions of years"
-        
-        , "like renaming it 'instant' if any future naming conflicts|needs occur"
-        
-        , "like that moments can be defined with custom epochs, year-size & more e.g:"
-        + "  Hebrew    moments as date-time since God created us & our world"
-        + "  Igbo      moments as 4-day, 7-week & 13-month cycles"
-        + "  Japanese  moments as year(s) of a given emperor"
-        + "  Gregorian moments as date-time BC & AD"
-        + "  Mayan     moments as varying multi & intra-year cycles"
-        + "  Stardate  moments as star trek's imaginary stardates"
-        + "  Big-Bang  moments as date-time observance of light's existence"
-        
-        , "like how a single-digit year-prefix can represent pre & post-epoch moments"
-        + "  e.g. -8.120181125 is 2018.11.25 @ UTC-08:00 post-epoch (post year-0)"
-        + "  e.g. -8.020181125 is 2018.11.25 @ UTC-08:00 pre -epoch (pre  year-0)"
-        
-        , "like [+-]TZOFCVER.YEARDATETIME +-HHMMCCCV.YYYYMMDDHHMM where:"
+        [ "like [+-]TZOFCVER.YEARDATETIME +-HHMMCCCV.YYYYMMDDHHMM where:"
         
         + "  [+-]: without TZOF + means post-epoch     & - means pre-epoch"
         + "      : with    TZOF + means post-base time & - means pre-base time"
@@ -93,7 +56,7 @@
     },
 
   when:
-    { format: "[+-]timezone.year-date-time"
+    { format: "[+-]timezone[calendar].year-date-time"
     , detail:
             [ "observer's perception of when an instant occurs"
             , " + prefix means after  calendar's base timezone"
@@ -106,10 +69,10 @@
     },
 
   timezone:
-    { format: "offset-hour[offset-minute[calendar]]"
+    { format: "offset-hour[offset-minute]"
     , values:
-        { minimum: -99999999
-        , maximum: +99999999
+        { minimum: -9999
+        , maximum: +9999
         }
     },
 
