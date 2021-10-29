@@ -5,8 +5,8 @@
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110291548
-    , at:  -0.015
+    , to:  -7.202110291613
+    , at:  -0.016
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -81,10 +81,6 @@
         [ "timezone's offset in hours; earth: 0..14, max earth hour is 23"
         , "must be 1 digit if less than 10 to ensure interpreted as a decimal number"
         ]
-    },
-
-  calendar:
-    { format: "calendar-id(calendar-version)"
     },
 
  "year-date-time":
