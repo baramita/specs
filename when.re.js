@@ -5,8 +5,8 @@
     , as: ["calendar", "date", "time", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110282023
-    , at:  -0.015
+    , to:  -7.202110291539
+    , at:  -0.016
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -45,12 +45,27 @@
       we:
         [ "will ionize EPOCHCAL explicit date & time epoch implicit calendar"
         + " specification"
+        
+        , "will apply ecmascript.bigint to epochcalendar & maybe for timezone-first:"
+        + " https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt"
+
+              +- 20211029032857999999999999999999999999n
+              +-/2021 10.29 03.28.57 999ms 999mcs 999ns 999ps 999fs 999as 999zs 999ys/
 
         , "want when@ implementations to keep their [+-] signed direction then"
         + " convert to +when@ so each sub-attribute, e.g. minute, month & calendar-id"
         + " will be +positive when parsed, with direction later applied where needed"
 
+        , "will implement an ecmascript getter for attribute.values.current that'll"
+        + " lookup|calculate & provide the attribute's current [local] host"
+        + " environment value"
+
         , "like {format:'some(thing)[else]'} where () = required & [] = optional"
+
+        , "like that ~re.at should not change for documentation-only changes already"
+        + " tracked by ~re.to:when. ion documentor can be sensitive to those changes."
+        + " that'll help ~re.at versions more accurately track behavior & data ion's"
+        + " actual content change."
 
         , "know that when@ well represents numeric date-time versus ecmascript.Date"
         + " : more date & time details in same number of digits; i.e. timezone offset"
@@ -61,7 +76,7 @@
         + " : can represent earth-star moments up to ones-place billions of years"
         + " : can represent existence moments up to tens-place trillions of years"
         
-        , "like renaming it 'instant' if any future naming conflicts|needs occur"
+        , "like renaming when@ 'instant' if any future naming conflicts|needs occur"
         
         , "like that moments can be defined with custom epochs, year-size & more e.g:"
         + "  Hebrew    moments as date-time since God created us & our world"
@@ -84,17 +99,6 @@
         + "  TZOF: HHMM: H:Hour,  M:Minute: Timezone Offset"
         + "     C:  CCC: C:digit: 0-999     Calendar Id #: hebrew, gregorian..."
         + "   VER:    V: V:digit: 0-9       Calendar Version"
-        
-        + "  TZOFCVER precision:"
-        
-        + "    1 digit  = T       : H     0-9  hour    no-minute base calendar"
-        + "    2 digits = TZ      : HH   10-99 hour    no-minute base calendar"
-        + "    3 digits = TOF     : HMM   1-9  hour 00-99 minute base calendar"
-        + "    4 digits = TZOF    : HHMM 10-99 hour 00-99 minute base calendar"
-        + "    5 digits = TCVER   : HCCCV     1-9  hour    no-minute full-0-prepend-ok calendar"
-        + "    6 digits = TZCVER  : HHCCCV   10-99 hour    no-minute full-0-prepend-ok calendar"
-        + "    7 digits = TOFCVER : HMMCCCV   1-9  hour 00-99 minute full-0-prepend-ok calendar"
-        + "    8 digits = TZOFCVER: HHMMCCCV 10-99 hour 00-99 minute full-0-prepend-ok calendar"
         ]
     },
 
@@ -108,6 +112,7 @@
     , digits:  46 || 8+17+3*7
     , values:
         { minimum: null
+        , current: null || "live value in [local] host environment"
         , maximum: null
         }
     },
@@ -120,6 +125,7 @@
     , digits:  8
     , values:
         { minimum: null
+        , current: null || "live value in [local] host environment"
         , maximum: null
         }
     },
@@ -133,6 +139,7 @@
     , digits:  2
     , values:
         { minimum:  0
+        , current: null || "live value in [local] host environment"
         , maximum: 99
         }
     },
@@ -144,6 +151,7 @@
     , digits:  2
     , values:
         { minimum: 00
+        , current: null || "live value in [local] host environment"
         , maximum: 99
         }
     },
@@ -155,6 +163,7 @@
     , digits:  4
     , values:
         { minimum: 0000
+        , current: null || "live value in [local] host environment"
         , maximum: 9999
         }
     },
@@ -165,6 +174,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     },
@@ -175,6 +185,7 @@
     , digits:  1
     , values:
         { minimum: 0
+        , current: null || "live value in [local] host environment"
         , maximum: 9
         }
     },
@@ -189,6 +200,7 @@
     , digits:  38 || 17+3*7
     , values:
         { minimum: null
+        , current: null || "live value in [local] host environment"
         , maximum: 99999999999999999999999999999999999999
         }
     },
@@ -199,6 +211,7 @@
     , digits:  8 || 4+2+2
     , values:
         { minimum: null
+        , current: null || "live value in [local] host environment"
         , maximum: 99999999
         }
     },
@@ -208,6 +221,7 @@
     , digits:  4
     , values:
         { minimum: null
+        , current: null || "live value in [local] host environment"
         , maximum: 9999
         }
     },
@@ -218,6 +232,7 @@
     , digits:  2
     , values:
         { minimum: 00
+        , current: null || "live value in [local] host environment"
         , maximum: 99
         }
     },
@@ -228,6 +243,7 @@
     , digits:  2
     , values:
         { minimum: 00
+        , current: null || "live value in [local] host environment"
         , maximum: 99
         }
     },
@@ -238,6 +254,7 @@
     , digits:  30
     , values:
         { minimum: 00
+        , current: null || "live value in [local] host environment"
         , maximum: 999999999999999999999999999999
         }
     },
@@ -248,6 +265,7 @@
     , digits:  2
     , values:
         { minimum: 00
+        , current: null || "live value in [local] host environment"
         , maximum: 99
         }
     },
@@ -258,6 +276,7 @@
     , digits:  2
     , values:
         { minimum: 00
+        , current: null || "live value in [local] host environment"
         , maximum: 99
         }
     },
@@ -268,6 +287,7 @@
     , digits:  2
     , values:
         { minimum: 00
+        , current: null || "live value in [local] host environment"
         , maximum: 99
         }
     },
@@ -275,6 +295,13 @@
  "sub-second":
     { format: "ms[mcs[ns[ps[fs[as[zs[ys]]]]]]]"
     , detail: "milli[micro[nano[pico[femto[atto[zepto[yocto]]]]]]"
+    ,   type: "number"
+    , digits:  24
+    , values:
+        { minimum: 00
+        , current: null || "live value in [local] host environment"
+        , maximum: 999999999999999999999999
+        }
     },
 
   ms:
@@ -283,6 +310,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     },
@@ -293,6 +321,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     },
@@ -303,6 +332,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     },
@@ -313,6 +343,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     },
@@ -323,6 +354,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     },
@@ -333,6 +365,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     },
@@ -343,6 +376,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     },
@@ -353,6 +387,7 @@
     , digits:  3
     , values:
         { minimum: 000
+        , current: null || "live value in [local] host environment"
         , maximum: 999
         }
     }
