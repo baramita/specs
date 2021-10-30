@@ -5,8 +5,8 @@
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110291613
-    , at:  -0.016
+    , to:  -7.202110291621
+    , at:  -0.017
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -65,14 +65,6 @@
       values:
         { minimum: -99999999.99999999999999999999999999999999999999
         , maximum: +99999999.99999999999999999999999999999999999999
-        }
-    },
-
-  timezone:
-    { format: "offset-hour[offset-minute]"
-    , values:
-        { minimum: -9999
-        , maximum: +9999
         }
     },
 

@@ -5,8 +5,8 @@
     , as: ["calendar", "date", "time", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110291615
-    , at:  -0.018
+    , to:  -7.202110300121
+    , at:  -0.019
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -118,15 +118,15 @@
     },
 
   timezone:
-    { format: null
+    { format: "offset-hour[offset-minute]"
     , detail: "relative to calendar's base timezone; e.g. gregorian utc 00:00"
     ,   type: "number"
     , signed:  true
     , digits:  4
     , values:
-        { minimum: null
+        { minimum: -9999
         , current: null || "live value in [local] host environment"
-        , maximum: null
+        , maximum: +9999
         }
     },
 
@@ -136,6 +136,7 @@
         , "must be 1 digit if less than 10 to ensure interpreted as a decimal number"
         ]
     ,   type: "number"
+    , signed:  true
     , digits:  2
     , values:
         { minimum:  0
@@ -147,7 +148,7 @@
  "offset-minute":
     { detail: "timezone's offset in minutes, optional if 00; earth: 00, 15, 30, 45"
     ,   type: "number"
-    ,   sign: "+"
+    , signed:  true
     , digits:  2
     , values:
         { minimum: 00
