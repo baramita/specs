@@ -5,8 +5,8 @@
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110300255
-    , at:  -0.018
+    , to:  -7.202110300639
+    , at:  -0.019
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
@@ -76,10 +76,8 @@
     },
 
  "year-date-time":
-    { format: "date[time]"
-    , digits:  38 || 17+3*7
-    , values:
-        { minimum: 0000
+    { values:
+        { minimum: 0
         }
     },
 
