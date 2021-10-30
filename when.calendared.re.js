@@ -1,19 +1,19 @@
 ;
 ~
 { re:
-    { id:  "when.calendar-first.re@ionify.net"
+    { id:  "when.calendared.re@ionify.net"
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110300233
-    , at:  -0.017
+    , to:  -7.202110300259
+    , at:  -0.018
     , in:
         [ "forest-hills.ny.us.earth"
         ,     "san-jose.ca.us.earth"
         ,           "tokyo.jp.earth"
         ],
       it:
-        [ "specifies an ordinal calendar-first calendar date & time format:"
+        [ "specifies an ordinal calendar-required date & time format:"
 
         + "  [+-]year[month[day[hour[minute[second[milli[micro[nano[pico[femto[atto[zepto[yocto]]]]]]]]]]]"
         + "     .timezoneOffsetHour[timezoneOffsetMinute[calendarIdVersion]]"
