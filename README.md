@@ -2,13 +2,13 @@
 
 ## [when](when.re.js)
 
-numeric representation of date & time via a number's digits & a leading `+` or `-` sign
+numeric representation of date & time via a number's digits & its leading `+` or `-` sign
 
 ### [timezone-focused](when.timezoned.re.js)
 
 ```js
-✨👇🏾
-- 7.202110271615                     ✨👇🏾
+ 👇🏾
+- 7.202110271615                      👇🏾
 =   2021.11.02         @ 16:15    UTC-07:00 gregorian calendar
 =   November 2nd, 2021 @  4:15 pm UTC-07:00 gregorian calendar
 ```
@@ -40,7 +40,9 @@ numeric representation of date & time via a number's digits & a leading `+` or `
 ###
 
 🙇🏾‍♂️ through * [**God**](LICENSE.txt) * impossible -is- nothing ||
-[🇬🇾](https://en.wikipedia.org/wiki/Guyana)👨🏾‍💻🇺🇸 [mike lee](https://github.com/iskitz) & [team](https://github.com/orgs/baramita/people)
+[🇬🇾👨🏾‍💻🇺🇸](https://en.wikipedia.org/wiki/Guyana)
+[**mike lee**](https://github.com/iskitz) &
+[**team**](https://github.com/orgs/baramita/people)
 🤎
 
 
