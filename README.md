@@ -2,7 +2,7 @@
 
 ## [when](when.re.js)
 
-numeric representation of date & time via a number's digits & its leading `+` or `-` sign
+numeric representation of date & time via a number's digits & leading `+` or `-` sign
 
 ### [timezone-focused](when.timezoned.re.js)
 
@@ -30,7 +30,7 @@ numeric representation of date & time via a number's digits & its leading `+` or
 = 2021.11.02         @ 16:15    UTC-07:00 gregorian calendar
 = November 2nd, 2021 @  4:15 pm UTC-07:00 gregorian calendar
 
-...and the equidistant, pre-epoch (year-0), instant|moment...
+...and its equidistant, pre-epoch (year-0), instant|moment...
 
 👇🏾
 - 202110271615007000010
