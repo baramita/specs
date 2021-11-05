@@ -37,7 +37,7 @@ numeric representation of date & time via a number's digits & its leading `+` or
 - 2021.11.02    @ 16:15 UTC-07:00 gregorian calendar
 = November 2nd, @ 16:15 UTC-07:00 gregorian calendar 2021 years pre-epoch
 ```
-###
+
 
 🙇🏾‍♂️ through * [**God**](LICENSE.txt) * impossible -is- nothing ||
 [🇬🇾👨🏾‍💻🇺🇸](https://en.wikipedia.org/wiki/Guyana)
