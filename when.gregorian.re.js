@@ -1,19 +1,19 @@
 ;
 ~
 { re:
-    { id:  "when.gregorian.re@ionify.net"
+    { id:  "when.gregorian.re@baramita.net"
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110291545
-    , at:  -0.015
+    , to:  -7.202111042354
+    , at:  -0.016
     , in:
-        [ "forest-hills.ny.us.earth"
-        ,     "san-jose.ca.us.earth"
-        ,           "tokyo.jp.earth"
+        [        "queens.ny.us.earth"
+        , "siliconvalley.ca.us.earth"
+        ,            "tokyo.jp.earth"
         ],
-      it:
-        [ "specifies an ordinal gregorian calendar date & time format:"
+      is:
+        [ "an ordinal gregorian calendar date & time format specification:"
 
         + "  [+-]timezoneOffsetHour[timezoneOffsetMinute[calendarIdVersion]]"
         + "     .year[month[day[hour[minute[second[milli[micro[nano[pico[femto[atto[zepto[yocto]]]]]]]]]]]"

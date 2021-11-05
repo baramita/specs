@@ -1,19 +1,19 @@
 ;
 ~
 { re:
-    { id:  "when.epoched.re@ionify.net"
+    { id:  "when.epoched.re@baramita.net"
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
-    , on:  -5.20020705
-    , to:  -7.20211104
-    , at:  -0.020
+    , on:   20020705005000010n
+    , to:   20211104235659007000010n
+    , at:  -0.021
     , in:
-        [         "queens.ny.us.earth"
-        , "silicon-valley.ca.us.earth"
-        ,             "tokyo.jp.earth"
+        [        "queens.ny.us.earth"
+        , "siliconvalley.ca.us.earth"
+        ,            "tokyo.jp.earth"
         ],
-      it:
-        [ "specifies an ordinal epoch-defined date & time format:"
+      is:
+        [ "an ordinal epoch-focused date & time format specification:"
 
         + "  [+-]year[month[day[hour[minute[second[milli[micro[nano[pico[femto[atto[zepto[yocto]]]]]]]]]]]"
         + "     (0|9)(timezoneOffset)(calendarIdVersion):"
@@ -66,6 +66,10 @@
              +  - 20211030033358997996995994993992991990007000010n
              +  - 20211030033358997996995994993992991990n       & 0 & 0700 &   0010
              ^/   the equidistant, pre-epoch instant per the same timezone & calendar/
+        
+        , "note that (+)prefixed bigint when@'s generate an ecmascript type error: "
+        + " TypeError: Conversion from 'BigInt' to 'number' is not allowed."
+        + "...so (+) must be omitted for post-epoch ecmascript when@ instants|moments"
         ]
     },
 

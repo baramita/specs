@@ -1,19 +1,19 @@
 ;
 ~
 { re:
-    { id:  "when.re@ionify.net"
+    { id:  "when.re@baramita.net"
     , as: ["calendar", "date", "time", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202110300121
-    , at:  -0.019
+    , to:  -7.20211104234759
+    , at:  -0.020
     , in:
-        [ "forest-hills.ny.us.earth"
-        ,     "san-jose.ca.us.earth"
-        ,           "tokyo.jp.earth"
+        [        "queens.ny.us.earth"
+        , "siliconvalley.ca.us.earth"
+        ,            "tokyo.jp.earth"
         ],
-      it:
-        [ "specifies an ordinal calendar date & time format:"
+      is:
+        [ "an ordinal calendar date & time format specification:"
 
         + "  [+-]timezoneOffsetHour[timezoneOffsetMinute[calendarIdVersion]]"
         + "     .year[month[day[hour[minute[second[milli[micro[nano[pico[femto[atto[zepto[yocto]]]]]]]]]]]"
