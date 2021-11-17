@@ -5,45 +5,22 @@
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202111042354
-    , at:  -0.016
+    , to:  -7.202111173259
+    , at:  -0.017
     , in:
-        [        "queens.ny.us.earth"
-        , "siliconvalley.ca.us.earth"
-        ,            "tokyo.jp.earth"
+        [         "queens.ny.us.earth"
+        , "silicon-valley.ca.us.earth"
+        ,             "tokyo.jp.earth"
         ],
       is:
-        [ "an ordinal gregorian calendar date & time format specification:"
-
-        + "  [+-]timezoneOffsetHour[timezoneOffsetMinute[calendarIdVersion]]"
-        + "     .year[month[day[hour[minute[second[milli[micro[nano[pico[femto[atto[zepto[yocto]]]]]]]]]]]"
-
-               -    8.20161117064221 <= / UTC-08:00 2016.11.17 06.42.21 means 2016, November 17th @ 6:42:21 am UTC-08:00 /
-               + 1245.20181117215759 <= / UTC+12:45 2018.11.17 21.57.59 means 2018, November 17th @ 9:57:59 pm UTC+12:45 /
-
-        , "can be represented as an IEEE 754 double-precision 64-bit binary format"
-        + " number, like ecmascript's, but it'll be subject to the standard's"
-        + " roundTiesToEven arithmetic rounding mode & will only have precision up to"
-        + " ~17 decimal places (digits). that provides when@ precision ranging from a"
-        + " signed 1-digit timezone offset number & 16-digit date & time remainder to"
-        + " signed 8-digit timezone offset & calendar-id number & 9-digit date & time"
-        + " remainder:"
-
-              +- 0.2021102713075999 <= /2021.10.27 13:07:59.99 timezone offset   0hrs/
-               - 12450009.202110260 <= /2021.10.26 0 gregorian timezone offset -12.45/
-        
-        , "has millisecond precision up to tens-place if timezone offset is unneeded"
-        + " because although ecmascript has numeric precision to 21 places, its"
-        + " maximum safe integer value is less than every number needed to represent"
-        + " a when@ with precision to milliseconds ones-place or sub-milliseconds:"
-                  
-        + "  [+-]YYYYMMDDHHMMSSMM"
-              +  2021102213035399      <= /2021.10.22.13.03.53.99 = 1:03:53:990 ms pm/
-              +  202110221303539991231 <= /2021.10.22.13.03.5:.999.123.1 is 21-places/
-              +- 9007199254740991      <= /ecmacript's max safe integer has 16-places/
+        [ "an ordinal gregorian calendar date & time format specification"
+        , "gregorian calendar, date, time & timezone as a decimal numeral"
+        , "can be applied with when@ specs like timezoned, epoched & calendared"
         ],
       we:
-        [ "like that moments can be defined with custom epochs, year-size & more e.g:"
+        [ "have {format:'some(thing)[else]'} where ...(...) =required [...] =optional"
+
+        , "like that moments can be defined with custom epochs, year-size & more e.g:"
         + "  Hebrew    moments as date-time since God created us & our world"
         + "  Igbo      moments as 4-day, 7-week & 13-month cycles"
         + "  Japanese  moments as year(s) of a given emperor"

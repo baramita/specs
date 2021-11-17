@@ -4,13 +4,13 @@
     { id:  "when.calendared.re@baramita.net"
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
-    , on:  -5.20020705
-    , to:  -7.202111042354
-    , at:  -0.019
+    , on:  -20020705.10500
+    , to:  -202111161729.10700
+    , at:  -0.020
     , in:
-        [        "queens.ny.us.earth"
-        , "siliconvalley.ca.us.earth"
-        ,            "tokyo.jp.earth"
+        [         "queens.ny.us.earth"
+        , "silicon-valley.ca.us.earth"
+        ,             "tokyo.jp.earth"
         ],
       is:
         [ "an ordinal calendar-focused date & time format specification:"
@@ -40,7 +40,7 @@
         + "  TZOF: HHMM: H:Hour,  M:Minute: Timezone Offset"
 
         + "  CVERTZOF precision of:"
-        
+
         + "    1 digit  = C       :   0-9   id 0   version calendar base timezone"
         + "    2 digits = CV      :   0-9   id 0-9 version calendar base timezone"
         + "    3 digits = CCV     :  00-99  id 0-9 version calendar base timezone"
@@ -49,6 +49,8 @@
         + "    6 digits = CVTZOF  :   0-9   id 0-9 version calendar HHMM timezone"
         + "    7 digits = CVETZOF :  00-99  id 0-9 version calendar HHMM timezone"
         + "    8 digits = CVERTZOF: 000-999 id 0-9 version calendar HHMM timezone"
+
+        , "have {format:'some(thing)[else]'} where ...(...) =required [...] =optional"
         ]
     },
 
@@ -76,7 +78,7 @@
         { minimum: 0
         }
     },
-  
+
   year:
     { values:
         { minimum: 0

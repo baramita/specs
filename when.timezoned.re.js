@@ -5,12 +5,12 @@
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.20211104234959
-    , at:  -0.020
+    , to:  -8.20211116172959
+    , at:  -0.021
     , in:
-        [        "queens.ny.us.earth"
-        , "siliconvalley.ca.us.earth"
-        ,            "tokyo.jp.earth"
+        [         "queens.ny.us.earth"
+        , "silicon-valley.ca.us.earth"
+        ,             "tokyo.jp.earth"
         ],
       is:
         [ "an ordinal timezone-focused calendar date & time format specification:"
@@ -33,17 +33,16 @@
                - 12450009.202110260 <= /2021.10.26 0 gregorian timezone offset -12.45/
         ],
       we:
-        [ "like [+-]TZOFCVER.YEARDATETIME +-HHMMCCCV.YYYYMMDDHHMM where:"
-        
-        + "  [+-]: without TZOF + means post-epoch     & - means pre-epoch"
-        + "      : with    TZOF + means post-base time & - means pre-base time"
-        
+        [ "have [+-]TZOFCVER.YEARDATETIME +-HHMMCCCV.YYYYMMDDHHMM where:"
+
+        + "  [+-]: + means post-base-timezone & - means pre-base-timezone"
+
         + "  TZOF: HHMM: H:Hour,  M:Minute: Timezone Offset"
         + "     C:  CCC: C:digit: 0-999     Calendar Id #: hebrew, gregorian..."
         + "   VER:    V: V:digit: 0-9       Calendar Version"
-        
-        + "  TZOFCVER precision:"
-        
+
+        , "plan TZOFCVER precision:"
+
         + "    1 digit  = T       : H     0-9  hour    no-minute base calendar"
         + "    2 digits = TZ      : HH   10-99 hour    no-minute base calendar"
         + "    3 digits = TOF     : HMM   1-9  hour 00-99 minute base calendar"
@@ -52,6 +51,8 @@
         + "    6 digits = TZCVER  : HHCCCV   10-99 hour    no-minute full-0-prepend-ok calendar"
         + "    7 digits = TOFCVER : HMMCCCV   1-9  hour 00-99 minute full-0-prepend-ok calendar"
         + "    8 digits = TZOFCVER: HHMMCCCV 10-99 hour 00-99 minute full-0-prepend-ok calendar"
+
+        , "have {format:'some(thing)[else]'} where ...(...) =required [...] =optional"
         ]
     },
 
@@ -87,7 +88,7 @@
         { minimum: 0000
         }
     },
-  
+
   year:
     { values:
         { minimum: 0000
