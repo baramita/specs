@@ -5,8 +5,8 @@
     , as: ["when", "specification"]
     , by: ["mike.lee", "team"]
     , on:  -5.20020705
-    , to:  -7.202111173259
-    , at:  -0.017
+    , to:  -8.20211212110959
+    , at:  -0.018
     , in:
         [         "queens.ny.us.earth"
         , "silicon-valley.ca.us.earth"
@@ -85,7 +85,7 @@
 
   time:
     { values:
-        { maximum: 595959999999999999999999999999
+        { maximum: 235959999999999999999999999999
         }
     },
 
