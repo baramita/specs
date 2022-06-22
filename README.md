@@ -47,8 +47,8 @@ numeric representation of date & time via a number's digits & prefixed `+` or `-
 = October 27th, @ 16:15 UTC-07:00 gregorian calendar 2021 years pre-epoch
 ```
 
-🙇🏾‍♂️ through * [**God**](LICENSE.txt#L1) * impossible -is- nothing ||
+🙇🏾‍♂️ through * [**יהוה**](LICENSE.txt#L1) * impossible -is- nothing ||
 [🇬🇾👨🏾‍💻🇺🇸](https://en.wikipedia.org/wiki/Guyana)
 [**mike lee**](https://github.com/iskitz) &
 [**team**](https://github.com/orgs/baramita/people)
-🤎
+🤲🏾
