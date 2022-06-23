@@ -6,77 +6,77 @@ numeric representation of a thing’s changes via a number’s digits & prefixed
 
 ### form
 
-`[+-][0]change.[0]revision`
+`[+-][0]publication.[0]revision`
 
 + **`[+-]`**
-   + `+` means full compatibility with previous change
-   + `-` means  incompatibilities with previous change
-   + blank  is full compatibility with previous change
-   + no needed `+-` compatibility sign at 0 & 1 changes
+  + `+` means full compatibility with previous publication
+  + `-` means  incompatibilities with previous publication
+  + blank  is full compatibility with previous publication
+  + no needed `+-` compatibility sign at 0 & 1 publications
 
-+ **change**
-   + `0` prefix means initial undecided publication
-   + any other number means api change(s) since previous change
++ **publication**
+  + `0` prefix number means the initial &  undecided publication
+  + any other  number means change(s) since previous publication
 
 + **revision**
-   + `0` prefix  means undecided compatible change(s) since previous revision
-   + any other # means   decided compatible change(s) since previous revision
+  + `0` prefix  means undecided compatible change(s) since previous revision
+  + any other # means   decided compatible change(s) since previous revision
 
 ```js
   0.0
-= the  1st, undecided &   unrevised, api
+= the  1st, undecided &   unrevised, publication
 
 + 0.0
-= the  1st, undecided &   unrevised, api
+= the  1st, undecided &   unrevised, publication
 
 - 0.0
-= the  1st, undecided &   unrevised, api
+= the  1st, undecided &   unrevised, publication
 
 - 0.1
-= the  1st  undecided & incompatible api revision
+= the  1st  undecided & incompatible    revision
 
 + 0.1
-= the  1st  undecided &   compatible api revision
+= the  1st  undecided &   compatible    revision
 
   0.1
-= the  1st  undecided                api revision
+= the  1st  undecided                   revision
 
 + 1.0
-= the  1st,   decided &   unrevised, api
+= the  1st,   decided &   unrevised, publication
 
 + 1.1
-= the  1st    decided &   compatible api revision
+= the  1st    decided &   compatible    revision
 
 + 1.02
-= the  1st    decided &   compatible api change
-& its  2nd  undecided                api revision 
+= the  1st    decided &   compatible publication
+& its  2nd  undecided                   revision
 
 + 1.010
-= the  1st    decided &   compatible api change
-& its 10th  undecided                api revision 
+= the  1st    decided &   compatible publication
+& its 10th  undecided                   revision
 
 + 02.0
-= the  2nd  undecided &   compatible api change
+= the  2nd  undecided &   compatible publication
 
 - 02.0
-= the  2nd  undecided & incompatible api change
+= the  2nd  undecided & incompatible publication
 
 + 2.0
-= the  2nd    decided &   compatible api change
+= the  2nd    decided &   compatible publication
 
 - 2.0
-= the  2nd    decided & incompatible api change
+= the  2nd    decided & incompatible publication
 
 + 2.01
-= the  2nd    decided &   compatible api change
-& its  1st  undecided                api revision 
+= the  2nd    decided &   compatible publication
+& its  1st  undecided                   revision
 
 - 3.013
-= the  3rd,   decided & incompatible api change
-& its 13th  undecided                api revision 
+= the  3rd,   decided & incompatible publication
+& its 13th  undecided                   revision
 
   4.0
-= the  4th    decided &   compatible api change
+= the  4th    decided &   compatible publication
 
 ```
 
