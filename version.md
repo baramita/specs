@@ -41,12 +41,13 @@ numeric representation of a thing’s changes via a number’s digits & prefixed
 + 0.1               0     👇🏾                  .1
 = the  1st  undecided &   compatible    revision
 
+👇🏾
   0.1               0                         .1
 = the  1st  undecided                   revision
+& its           blank     compatibility
+                   👆🏾
 
-
-
-+ 1.0               1                         .1
++ 1.0               1                         .0
 = the  1st,   decided &   unrevised, publication
 
 👇🏾
