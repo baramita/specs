@@ -12,7 +12,7 @@ numeric representation of a thing’s changes via a number’s digits & prefixed
   + `+` means full compatibility with previous publication
   + `-` means  incompatibilities with previous publication
   + blank  is full compatibility with previous publication
-  + no needed `+-` compatibility sign at 0 & 1 publications
+  + optional  `+-` compatibility sign at 0 & 1 publications
 
 + **publication**
   + `0` prefix number means the initial &  undecided publication
@@ -23,59 +23,80 @@ numeric representation of a thing’s changes via a number’s digits & prefixed
   + any other # means   decided compatible change(s) since previous revision
 
 ```js
-  0.0
+  0.0               0            .0
 = the  1st, undecided &   unrevised, publication
 
-+ 0.0
++ 0.0               0            .0
 = the  1st, undecided &   unrevised, publication
 
-- 0.0
+- 0.0               0            .0
 = the  1st, undecided &   unrevised, publication
 
-- 0.1
+
+👇🏾
+- 0.1               0   👇🏾                    .1
 = the  1st  undecided & incompatible    revision
 
-+ 0.1
+👇🏾
++ 0.1               0     👇🏾                  .1
 = the  1st  undecided &   compatible    revision
 
-  0.1
+  0.1               0                         .1
 = the  1st  undecided                   revision
 
-+ 1.0
+
+
++ 1.0               1                         .1
 = the  1st,   decided &   unrevised, publication
 
-+ 1.1
+👇🏾
++ 1.1               1     👇🏾                  .1
 = the  1st    decided &   compatible    revision
 
-+ 1.02
+👇🏾
+  1.02              1     👇🏾
 = the  1st    decided &   compatible publication
 & its  2nd  undecided                   revision
-
-+ 1.010
+                   .0                          2
+👇🏾
++ 1.010             1     👇🏾
 = the  1st    decided &   compatible publication
 & its 10th  undecided                   revision
+                   .0                         10
 
-+ 02.0
+
+👇🏾
++ 02.0             02     👇🏾
 = the  2nd  undecided &   compatible publication
 
-- 02.0
+👇🏾
+- 02.0             02   👇🏾
 = the  2nd  undecided & incompatible publication
 
-+ 2.0
+👇🏾
++ 2.0               2     👇🏾
 = the  2nd    decided &   compatible publication
 
-- 2.0
+👇🏾
+- 2.0               2   👇🏾
 = the  2nd    decided & incompatible publication
 
-+ 2.01
+👇🏾
++ 2.01              2     👇🏾
 = the  2nd    decided &   compatible publication
 & its  1st  undecided                   revision
+                   .0                          1
 
-- 3.013
+
+👇🏾
+- 3.013             3   👇🏾
 = the  3rd,   decided & incompatible publication
 & its 13th  undecided                   revision
+                   .0                         13
 
-  4.0
+
+👇🏾
+  4.0               2     👇🏾
 = the  4th    decided &   compatible publication
 
 ```
