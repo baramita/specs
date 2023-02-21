@@ -6,47 +6,58 @@ numeric representation of a thing’s changes via a number’s digits & prefixed
 
 ### form
 
-`[+-][0]publication.[0]revision`
+`[+-][0]publication.[0]decision[revision]`
 
 + **`[+-]`**
   + `+` means full compatibility with previous publication
   + `-` means  incompatibilities with previous publication
   + blank  is full compatibility with previous publication
-  + optional  `+-` compatibility sign at 0 & 1 publications
+  + optional  `+-` compatibility sign at 0 pre-publication
 
 + **publication**
   + `0` prefix number means the initial &  undecided publication
   + any other  number means change(s) since previous publication
 
++ **decision | edition**
+  + `0` prefix number means no   decision    about the stated publication
+  + any other  number means some decision(s) about the stated publication
+
 + **revision**
-  + `0` prefix  means undecided compatible change(s) since previous revision
-  + any other # means   decided compatible change(s) since previous revision
+  + `0` prefix  means no              change(s) since stated   decision
+  + any other # means some compatible change(s) since previous revision
 
 ```js
-  0.0               0            .0
-= the  1st, undecided &   unrevised, publication
-
-+ 0.0               0            .0
-= the  1st, undecided &   unrevised, publication
-
-- 0.0               0            .0
-= the  1st, undecided &   unrevised, publication
-
+  0.00            0               .0            0
+=   compatible pre-publication undecided &   unrevised
 
 👇🏾
-- 0.1               0   👇🏾                    .1
-= the  1st  undecided & incompatible    revision
++ 0.00   👇🏾       0               .0            0
+=   compatible pre-publication undecided &   unrevised
 
 👇🏾
-+ 0.1               0     👇🏾                  .1
-= the  1st  undecided &   compatible    revision
+- 0.00   👇🏾       0               .0            0
+= incompatible pre-publication undecided &   unrevised
 
 👇🏾
-  0.1               0                         .1
-= the  1st  undecided                   revision
-& its           blank     compatibility
-                   👆🏾
+- 0.01   👇🏾       0               .0            01
+= incompatible pre-publication undecided & 1st revised
+```
 
+```js
+👇🏾
+- 0.10   👇🏾       0                .1            0
+= incompatible pre-publication 1st decided &   unrevised
+
+👇🏾
++ 0.10   👇🏾       0                .1            0
+=   compatible pre-publication 1st decided &   unrevised
+
+👇🏾
+  0.10   👇🏾       0                .1            0
+=   compatible pre-publication 1st decided &   unrevised
+```
+
+```js
 + 1.0               1                         .0
 = the  1st,   decided &   unrevised, publication
 
@@ -64,8 +75,9 @@ numeric representation of a thing’s changes via a number’s digits & prefixed
 = the  1st    decided &   compatible publication
 & its 10th  undecided                   revision
                    .0                         10
+```
 
-
+```js
 👇🏾
 + 02.0             02     👇🏾
 = the  2nd  undecided &   compatible publication
@@ -87,22 +99,21 @@ numeric representation of a thing’s changes via a number’s digits & prefixed
 = the  2nd    decided &   compatible publication
 & its  1st  undecided                   revision
                    .0                          1
+```
 
-
+```js
 👇🏾
 - 3.013             3   👇🏾
 = the  3rd,   decided & incompatible publication
 & its 13th  undecided                   revision
                    .0                         13
-
-
 👇🏾
   4.0               2     👇🏾
 = the  4th    decided &   compatible publication
 
 ```
 
-🙇🏾‍♂️ through * [**יהוה**](LICENSE.txt) * impossible -is- nothing ||
+🙇🏾‍♂️ through * [**יהוה**](LICENSE.txt#L1) * impossible -is- nothing ||
 [🇬🇾👨🏾‍💻🇺🇸](https://en.wikipedia.org/wiki/Guyana)
 [**mike lee**](https://github.com/iskitz) &
 [**team**](https://github.com/orgs/baramita/people)
