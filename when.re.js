@@ -1,16 +1,15 @@
 ;
 ~
 { re:
-    { id:  "when.re@baramita.net"
-    , as: ["calendar", "date", "time", "specification"]
-    , by: ["mike.lee", "team"]
+    { id:  'when.re@baramita.net'
+    , as: ['calendar', 'date', 'time', 'instantiation', 'specification']
+    , by: ['🙇🏾‍♂️ יהוה 🤲🏾', 'mike.🇬🇾👨🏾‍💻🇺🇸.lee', 'team✨baramita']
     , on:  -5.20020705
-    , to:  -8.20211116
-    , at:  -0.021
+    , to:  -8.20221211
+    , at:  -0.022
     , in:
-        [         "queens.ny.us.earth"
-        , "silicon-valley.ca.us.earth"
-        ,             "tokyo.jp.earth"
+        [         'queens.ny.us.earth'
+        , 'silicon-valley.ca.us.earth'
         ],
       is:
         [ "an ordinal calendar date & time format specification"
@@ -150,7 +149,7 @@
     , values:
         { minimum: null
         , current: null || "live value in [local] host environment"
-        , maximum: 99999999999999999999999999999999999999
+        , maximum: 99999999999999999999999999999999999999n
         }
     },
 
@@ -204,7 +203,7 @@
     , values:
         { minimum: 00
         , current: null || "live value in [local] host environment"
-        , maximum: 999999999999999999999999999999
+        , maximum: 999999999999999999999999999999n
         }
     },
 
@@ -249,7 +248,7 @@
     , values:
         { minimum: 00
         , current: null || "live value in [local] host environment"
-        , maximum: 999999999999999999999999
+        , maximum: 999999999999999999999999n
         }
     },
 

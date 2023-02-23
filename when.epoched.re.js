@@ -1,16 +1,15 @@
 ;
 ~
 { re:
-    { id:  "when.epoched.re@baramita.net"
-    , as: ["when", "specification"]
-    , by: ["mike.lee", "team"]
+    { id:  'when.epoched.re@baramita.net'
+    , as: ['when', 'instantiation', 'specification']
+    , by: ['🙇🏾‍♂️ יהוה 🤲🏾', 'mike.🇬🇾👨🏾‍💻🇺🇸.lee', 'team✨baramita']
     , on:   20020705005000010n
-    , to:   20211116172959008000010n
-    , at:  -0.021
+    , to:   20221201125659008000010n
+    , at:  -0.022
     , in:
-        [         "queens.ny.us.earth"
-        , "silicon-valley.ca.us.earth"
-        ,             "tokyo.jp.earth"
+        [         'queens.ny.us.earth'
+        , 'silicon-valley.ca.us.earth'
         ],
       is:
         [ "an ordinal epoch-focused date & time format specification:"

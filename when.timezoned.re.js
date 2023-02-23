@@ -1,16 +1,15 @@
 ;
 ~
 { re:
-    { id:  "when.timezoned.re@baramita.net"
-    , as: ["when", "specification"]
-    , by: ["mike.lee", "team"]
+    { id:  'when.timezoned.re@baramita.net'
+    , as: ['when', 'instantiation', 'specification']
+    , by: ['🙇🏾‍♂️ יהוה 🤲🏾', 'mike.🇬🇾👨🏾‍💻🇺🇸.lee', 'team✨baramita']
     , on:  -5.20020705
-    , to:  -8.20211116172959
-    , at:  -0.021
+    , to:  -8.202212111332
+    , at:  -0.022
     , in:
-        [         "queens.ny.us.earth"
-        , "silicon-valley.ca.us.earth"
-        ,             "tokyo.jp.earth"
+        [         'queens.ny.us.earth'
+        , 'silicon-valley.ca.us.earth'
         ],
       is:
         [ "an ordinal timezone-focused calendar date & time format specification:"
@@ -53,6 +52,15 @@
         + "    8 digits = TZOFCVER: HHMMCCCV 10-99 hour 00-99 minute full-0-prepend-ok calendar"
 
         , "have {format:'some(thing)[else]'} where ...(...) =required [...] =optional"
+        ,
+        [ "WILL add dow: day-of-week as 1 bit, 0-6|1-7, between date & time:"
+        ,     "1-7 is more accurate to יהוה days 1 - 7:Sabbath"
+        ,     "0-6 is more jsnative as Date days 0 - 6:Saturday"
+        ]
+        , "NOTE ECMAScript is developing new Temporal time apis @"
+        , "https://tc39.es/proposal-temporal/docs/index.html to fix js.Dates &"
+        , "https://tc39.es/proposal-temporal/docs/calendar.html js.Calendars @"
+        , "https://maggiepint.com/2017/04/09/fixing-javascript-date-getting-started/"
         ]
     },
 

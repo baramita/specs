@@ -1,16 +1,15 @@
 ;
 ~
 { re:
-    { id:  "when.calendared.re@baramita.net"
-    , as: ["when", "specification"]
-    , by: ["mike.lee", "team"]
+    { id:  'when.calendared.re@baramita.net'
+    , as: ['when', 'instantiation', 'specification']
+    , by: ['🙇🏾‍♂️ יהוה 🤲🏾', 'mike.🇬🇾👨🏾‍💻🇺🇸.lee', 'team✨baramita']
     , on:  -20020705.10500
-    , to:  -202111161729.10700
-    , at:  -0.020
+    , to:  -202212011256.10800
+    , at:  -0.021
     , in:
-        [         "queens.ny.us.earth"
-        , "silicon-valley.ca.us.earth"
-        ,             "tokyo.jp.earth"
+        [         'queens.ny.us.earth'
+        , 'silicon-valley.ca.us.earth'
         ],
       is:
         [ "an ordinal calendar-focused date & time format specification:"
