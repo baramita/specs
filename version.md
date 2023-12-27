@@ -147,7 +147,7 @@ software sensing & interpretation.
 & its 13th  undecided                   revision
                    .0                         13
 👇🏾
-  4.0               2     👇🏾
+  4.0               4     👇🏾
 = the  4th    decided &   compatible publication
 
 ```
